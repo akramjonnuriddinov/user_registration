@@ -1,12 +1,21 @@
 <template>
-  <div>
-    Hello Medium Clone
-    <router-view />
+  <div id="app">
+    <mc-header />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import McHeader from '@/components/Header.vue'
+import { actionTypes } from './store/modules/auth'
+
 export default {
-  name: 'McApp',
+  name: 'App',
+  components: {
+    McHeader,
+  },
+  mounted() {
+    this.$store.dispatch(actionTypes.getCurrentUser)
+  },
 }
 </script>

@@ -1,13 +1,15 @@
-import { createApp } from 'vue'
 import { createStore } from 'vuex'
 
-const store = createStore({
+import auth from '@/store/modules/auth'
+import feed from './modules/feed'
+
+export default createStore({
   state: {},
   getters: {},
   mutations: {},
   actions: {},
-  modules: {},
+  modules: {
+    auth,
+    feed,
+  },
 })
-
-const app = createApp()
-app.use(store)
