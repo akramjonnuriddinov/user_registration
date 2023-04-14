@@ -1,9 +1,9 @@
 <template>
-  <div class="home">Home Page</div>
+  <div>Sign Up Page</div>
 </template>
 
 <script>
 export default {
-  name: 'McHome',
+  name: 'McSignUp',
 }
 </script>
